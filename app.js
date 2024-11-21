@@ -271,14 +271,43 @@ while (num < 5) {
 }
 
 //Destructuracion
+console.clear();
 
 {
     //En esta destructuracion se le asigna a cada elemento del array 
-    //y 
+    //como una variable, al ser llamada la variable se muestra el elemento del array
     const equipos = ["bucaramanga", "america", "cucuta"];
     const [mejor, malo, malisimo] = equipos;
     console.log(mejor);
     console.log(malo);
     console.log(malisimo);
 }
+
+
+// Objetos literales
+// Un objeto literal es un conjunto de propiedades que estan entre {}
+
+{
+    let carro = {
+        color: 'rojo',
+        marca: 'suzuki',
+        modelo: 'no se',
+        año: 2006
+    };
+    console.log(carro);
+}
+
+
+// Declarar una variable para almacenar la suma
+{let suma = 0;
+
+// Usar un bucle for para recorrer los números del 1 al 10
+for (let i = 1; i <= 10; i++) {
+  suma += i; // Sumar el valor de i a la variable suma
+}
+
+// Imprimir el resultado
+console.log("La suma de los números del 1 al 10 es:", suma);
+}
+
 
