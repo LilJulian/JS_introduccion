@@ -282,6 +282,56 @@ console.clear();
     console.log(malo);
     console.log(malisimo);
 }
+console.clear();
+let tres = 3.50;
+let flotante = 7.1542;
+console.log(flotante.toFixed(1));
+let nuevo = parseFloat(tres);
+if (typeof tres === "number") {
+    console.log(tres * nuevo);
+}else{
+    console.log("No");
+}
+console.log(typeof tres === "number");
+
+
+{
+
+ 
+    // function esPrimo(primo) {
+    //     if(primo %= 2 || primo != 1 || primo != 0){
+    //         console.log("es primo");
+    //     }else{
+    //         console.log("no es primo");
+            
+    //     }
+    // }
+    // esPrimo(1)
+    console.clear();
+    
+    function esPrimo(numero) {
+        let contador = 0;
+        for (let i = 2; i < numero; i++) {
+            if (numero % i === 0) {
+                contador++;
+            }
+        }if (contador === 2){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    console.log(esPrimo(9));
+}
+
+console.clear();
+// FUncion anonima automatica
+
+{
+    (function(){
+        alert("llamame")
+    })()
+}
 
 
 // Objetos literales
