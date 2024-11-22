@@ -282,6 +282,8 @@ console.clear();
     console.log(malo);
     console.log(malisimo);
 }
+
+
 console.clear();
 let tres = 3.50;
 let flotante = 7.1542;
@@ -342,7 +344,10 @@ console.clear();
         color: 'rojo',
         marca: 'suzuki',
         modelo: 'no se',
-        año: 2006
+        año: 2006,
+        acelerar() {
+            console.log('El carro acelera');
+        }
     };
     console.log(carro);
 }
@@ -370,8 +375,189 @@ console.log(datos('julian', 103886812, 'araque', 'masculino', 2006));
     console.log(suma(5, 5));
     
 }
+console.clear();
+
+{
+    const a = [1, 'letras', true, false, [1, 'John']];
+    a.push('julian');//agregar en la ultima posicion del array
+    a.pop();// elimina el ultimo elemento del array
+    console.log(a.pop());
+    
+}
+
+console.clear();
+
+{
+    let carro = {
+        color: 'rojo',
+        marca: 'suzuki',
+        modelo: 'no se',
+        año: 2006,
+        arrancar : function() {
+            return `El carro ${this.color}  acelera y es un ${this.marca} del año ${this.año}`;  //this es para llamar la propiedad de un objeto
+            
+        },
+        sistema: 'hidraulico'
+    };
+    console.log(carro.arrancar());
+    carro.pais = 'colombia',
+    carro.despedida = function() {
+        return `chao me voy para ${this.pais}`;   
+    } 
+    console.log(carro.despedida());
+    console.clear();
+
+    // De aqui para abajo son metodos para validar si la propiedad del objeto existe
+    console.log(Object.keys(carro).indexOf("aqui va el nombre de la propiedad")); //retorna -1 si no existe la propiedad
+    if (Object.keys(carro).indexOf('año')=== -1){                                 //y si existe retorna el numero de la posicion
+        console.log('el atributo no fue definido');
+    }
+    console.clear();
+    
+    console.log(Object.keys(carro).includes("color")) // retorna true o false si existe la propiedad en el objeto
+    //Hasta aca la validacion de la propiedad de un objeto
+}
+
+console.clear();
+
+// Operadores
+{
+    let a = 10;
+    let b = '10';
+    let c = 7;
+
+    let resultado = a + (b + (b - a)* a) / c;
+    console.log(resultado);
+    console.clear();
+    
+    // if (typeof a === 'number' && typeof b === 'number'){    //typeof detecta el tipo de un valor
+    //     console.log('si es un numero ', a % b);
+    // }else{
+    //     console.log('no es un numero');
+        
+    // }
+
+    // Operadores logicos
+    // (<) menor que
+    // (>) mayor que
+    // (<=) menor o igual que
+    // (>=) mayor o igual que
+    // (==) igual
+    // (===) valor y tipo de dato
+    // (!=) negacion
+     console.log(a < b); 
+     console.log(a > b);
+     console.log(a >= b);
+     console.log(a <= b);
+     console.log(a == b);
+     console.log(a === b);
+     console.log(a !== b);
+
+}
+
+console.clear();
+{
+    let i = 0;
+    console.log(i--);// muestra y luego resta
+    console.log(i); //muestra
+    console.log(i++); // muestra y luego suma
+    console.log(++i); // suma  y muestra
+    console.log(i++); // muestra y luego suma
+    console.log(i); //muestra
+}
+
+// Operador de asignacion
+console.clear();
+
+{
+    let i = 0;
+
+    console.log (i = + 4); //se le asigana a la variable i un valor
+}
+
+console.clear();
+
+// Operadores logicos
+{
+    let a = 5;
+    let b = 7;
+    // El operador or o o returna true o false, si hay una expresion verdadera devuelve true, si no devuelve false
+    // osea basta con una condicion verdadera para obtener un true
+    console.log(a > b || true); 
+    // El operador y "&&" compara ambas condiciones  y siempre va a ser negativa excepto si ambas condiciones
+    // se cumple
+    console.log (false && a < b); 
+
+    // console.log (!false && !true);
+    if (!false && !true)  {
+        console.log("?");
+    } else {
+        console.log("??");
+    }
+        
+    let respuesta = (false) ? "si" : "no";
+    console.log(respuesta);
+}
+
+// Switch case
+
+{
+    let dia = 2;
+    switch (dia) {
+        case 1:
+            console.log('lunes');
+            break;             
+        case 2:
+            console.log('martes');
+            break;
+        case 3: 
+            console.log('miercoles');
+            break;
+        case 4:
+            console.log('jueves');
+            break;
+        case 5:
+            console.log('viernes');
+            break;
+        case 6:
+            console.log('sabado');
+            break;
+        case 7:
+            console.log('domingo');
+            break;
+        default:
+            console.log('ese dia no existe');
+            break;      
+    }         
+}
+
+console.clear();
+
+// Ciclos
+
+// while && do while
+{
+    // let n = 8;
+    // let cont = 1;
+    // while (cont <= n) {
+    //     console.log(cont);
+    //     cont++;
+    // }
+
+    // do{
+    //     console.log('hola');
+    // }while(false);
 
 
-
-
+    // Imprimir los primero 20 numeros pares, para esto se hace el ciclo y se le
+    // asigan una condicion que divida el numero del ciclo y segun el residuo de la division
+    // se imprime o no el numero
+    numero = 0;
+    for (let i = 1; i < 10; i++) {
+        if (numero % 1 === 0) {
+        console.log(numero);
+        }
+        numero++;
+    }
+}
 
