@@ -327,11 +327,11 @@ console.log(typeof tres === "number");
 console.clear();
 // FUncion anonima automatica
 
-{
-    (function(){
-        alert("llamame")
-    })()
-}
+// {
+//     (function(){
+//         alert("llamame")
+//     })()
+// }
 
 
 // Objetos literales
@@ -347,17 +347,31 @@ console.clear();
     console.log(carro);
 }
 
+// parámetros REST y Operador Spread
 
-// Declarar una variable para almacenar la suma
-{let suma = 0;
+{//paramtros rest
+    
+    function datos(nombre, id, ...rest) {
+    return rest;
+    }
+// solo imprimira el resto de parametros ya que eso es lo que retorna
+}
+console.log(datos('julian', 103886812, 'araque', 'masculino', 2006));
 
-// Usar un bucle for para recorrer los números del 1 al 10
-for (let i = 1; i <= 10; i++) {
-  suma += i; // Sumar el valor de i a la variable suma
+// arrow function es una funcion que ocupa una linea de codigo
+// se declara la funcion => se declaran parametros y el codigo a retornar 
+
+{
+    let saludo = nombre => `hola ${nombre}`;
+    console.log(saludo('julian'));
+//con varios parametros
+
+    let suma =(a, b) => a + b;
+    console.log(suma(5, 5));
+    
 }
 
-// Imprimir el resultado
-console.log("La suma de los números del 1 al 10 es:", suma);
-}
+
+
 
 
