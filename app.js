@@ -270,19 +270,6 @@ while (num < 5) {
 
 }
 
-//Destructuracion
-console.clear();
-
-{
-    //En esta destructuracion se le asigna a cada elemento del array 
-    //como una variable, al ser llamada la variable se muestra el elemento del array
-    const equipos = ["bucaramanga", "america", "cucuta"];
-    const [mejor, malo, malisimo] = equipos;
-    console.log(mejor);
-    console.log(malo);
-    console.log(malisimo);
-}
-
 
 console.clear();
 let tres = 3.50;
@@ -552,12 +539,71 @@ console.clear();
     // Imprimir los primero 20 numeros pares, para esto se hace el ciclo y se le
     // asigan una condicion que divida el numero del ciclo y segun el residuo de la division
     // se imprime o no el numero
-    numero = 0;
-    for (let i = 1; i < 10; i++) {
-        if (numero % 1 === 0) {
-        console.log(numero);
-        }
-        numero++;
+    
+    // for (let i = 1;i < 40;i++){        
+    //     let contador = 0;
+    //     for (let divi = 1; divi <= i; divi++){
+    //         if (i % divi === 0){
+    //             contador++;
+    //         }
+    //     }if (contador === 2){
+    //         console.log(i);
+    //     }
+    // }
+
+    // let numero = parseFloat(prompt("ingrese la cantidad de numeros: "));
+    // const esPrimo = a =>{
+    //     let primo = true;
+    //     try {
+    //         if (a < 0){
+    //             throw new ("El numero debe ser positivo");
+    //         }            
+    //         for(let i = 2; i < a / 2; i++){
+    //         if(a % i === 0) primo = false;
+    //    }
+    //    return primo;
+    //     }catch(error){
+    //         console.log(error);
+    //         return false;
+    //     }
+        
+    // }
+    // const llenado = function(numero){
+    //     let contador = 1;
+    //     let arreglo = [];
+    //     while(contador <= numero){
+    //         if(esPrimo(contador)){
+    //             arreglo.push(contador);
+    //         }
+    //         contador++;
+    //     }
+    //     console.log(arreglo);
+    // }
+    // llenado(numero);
+}
+
+//Destructuracion
+console.clear();
+
+{
+    //En esta destructuracion se le asigna a cada elemento del array 
+    //como una variable, al ser llamada la variable se muestra el elemento del array
+    const equipos = ["bucaramanga", "america", "cucuta"];
+    const [mejor, malo, malisimo] = equipos;
+    console.log(mejor, malo, malisimo);
+    
+}
+console.clear();
+{
+    let persona ={
+        nombre: "julian",
+        apellido: "araque",
+        edad: 18
     }
+
+    let {nombre:name, apellido:lastname, edad:years, username ='LilJulian'} = persona;
+
+    console.log(name, lastname, years, username);
+
 }
 
