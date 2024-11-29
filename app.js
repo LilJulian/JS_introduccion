@@ -607,3 +607,149 @@ console.clear();
 
 }
 
+console.clear();
+
+{
+    //Numeros amigos
+    function amigos(a, b) {
+        let sumaA = 0;
+        let sumaB = 0;
+        for (let i = 0; i<= a/2 ; i++) {
+            if (a % i === 0 ){
+                // console.log(i);                
+                console.log(i);   
+                sumaA += i;          
+            }
+        }
+        console.log("segundo");
+        for (let e = 0; e <= b/2 ; e++) {
+            if (b % e === 0 ){
+                // console.log(e);                
+                console.log(e);     
+                sumaB += e;         
+            }                                
+        }
+        if (sumaA === b && sumaB === a){
+            console.log("son amigos")
+
+        }else{
+            console.log("no son amigos"); 
+        }
+    }
+    amigos(220,284);
+}
+console.clear();
+
+//Ejercicio numero perfecto
+{
+    function perfecto(a) {
+        let sumaA = 0;
+        for (let i = 0; i<= a/2 ; i++) {
+            if (a % i === 0 ){                                          
+                console.log(i);
+                sumaA += i; 
+            }
+        }if (sumaA === a){
+            console.log("es perfecto");  
+        } 
+        else{
+            console.log("no perfecto");
+        }   
+    }
+    perfecto(6);
+}
+console.clear();
+//Parametro rest
+{
+    // function suma(a, b, ...c) {
+    //     let suma = 0;
+    //     for (let i = 0; i< c.length; i++){
+    //         if(typeof(c[i])=== 'number'){
+    //         suma += c[i];
+    //         console.log(suma);
+    //     }
+    //     if (typeof(a)=== 'number') suma += a;
+    //     if (typeof(b)=== 'number') suma += b;
+    //     return suma;
+            
+    //     }
+    //     return a + b + c;
+    // }
+    // let resultado = suma(9, "dos", 21, 1, 5, "cuatro", 6);
+    // console.log(resultado);
+    
+}
+{
+    const arrayA = [1, 2, 3];
+    const arrayB = ['a', 'b', 'c'];
+
+    // const arrayC = arrayA + arrayB;
+    // const arrayC = arrayA.concat(arrayB);
+    const arrayC = [...arrayA, ...arrayB];
+    console.log(arrayC);
+    
+}
+console.clear();
+{
+    // const flecha = julian => {
+    //     console.log(julian);
+    // }
+    // console.log(julian);
+
+    const anonima = (...a) => {
+        console.log(a);
+        
+    }
+    console.log(anonima());
+    
+}
+
+console.clear();
+
+// P.O.O
+{
+    class Persona{
+        constructor(nombreA, apellidoA, edadA){
+            this.nombre = nombreA
+            this.apellido = apellidoA
+            this.edad = edadA
+        }
+        //Metodos
+        comer(){
+            console.log(`${this.nombre} esta comiendo empanada`);
+        }
+    }
+
+    const julian = new Persona('Julian', 'Araque' , 18);
+    const johan = new Persona('Johan', 'Bautista' , 18);
+    julian.comer();
+    johan.comer();   
+}
+
+console.clear();
+
+// Expresiones regulares
+
+{
+    let palabra = "123 Hola 2 es mi 1 hola 234567 culpa";
+    palabra = "1234       vaca";
+    let regex = /^([\d]{3,6}).+([a-z]{4,6})$/g;
+
+    // if (palabra.includes(regex)) console.log("si tiene");
+    // else{
+    //     console.log("no tiene");
+    // }
+
+   console.log(regex.test(palabra));
+    // console.log(regex.exec(palabra));
+    console.log(palabra.match(regex));
+}
+
+console.clear();
+// Import y export 
+{
+    const PI = 3.1416;
+
+    console.log(PI);
+    
+}
